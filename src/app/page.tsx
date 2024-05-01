@@ -1,12 +1,10 @@
-import { db } from "~/server/db";
-
+// disable caching of older images, and force new images to the ui ASAP.
 export const dynamic = "force-dynamic";
 
-async function Images() {
-  const images = await db.query.images.findMany({
-    orderBy: (model, { desc }) => desc(model.id),
-  });
+import { GetImages } from "~/server/queries";
 
+async function Images() {
+  const images = await GetImages();
   return (
     <div className="flex flex-wrap gap-4">
       {images.map((image) => (
