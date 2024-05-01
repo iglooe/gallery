@@ -1,9 +1,10 @@
 import "server-only";
-import { db } from "./db";
 import { auth } from "@clerk/nextjs/server";
-import { images } from "./db/schema";
 import { and, eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
+
+import { db } from "./db";
+import { images } from "./db/schema";
 
 export async function getAllImages() {
   const images = await db.query.images.findMany({

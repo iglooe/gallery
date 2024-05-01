@@ -3,8 +3,8 @@ export const dynamic = "force-dynamic";
 
 import Image from "next/image";
 import Link from "next/link";
-import { Shell } from "~/components/shell";
 
+import { Shell } from "~/components/shell";
 import { getAllImages } from "~/server/queries";
 
 async function Images() {

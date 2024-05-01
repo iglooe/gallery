@@ -11,6 +11,7 @@ import { ourFileRouter } from "~/app/api/uploadthing/core";
 
 import "@uploadthing/react/styles.css";
 import { ScrollArea } from "~/components/ui/scroll-area";
+import { TailwindIndicator } from "~/components/tailwind-indicator";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
           </div>
           {modal}
           <div id="modal-root" />
+          <TailwindIndicator />
         </body>
       </html>
     </ClerkProvider>

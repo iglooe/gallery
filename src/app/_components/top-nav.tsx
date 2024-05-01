@@ -2,6 +2,7 @@
 
 import { SignedOut, SignInButton, SignedIn, UserButton } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
+
 import { UploadButton } from "~/utils/uploadthing";
 
 export function TopNav() {
