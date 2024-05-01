@@ -10,6 +10,7 @@ import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
 
 import "@uploadthing/react/styles.css";
+import { ScrollArea } from "~/components/ui/scroll-area";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,7 +37,7 @@ export default function RootLayout({
         <body className={`font-sans ${inter.variable}`}>
           <div className="grid h-screen grid-rows-[auto,1fr]">
             <TopNav />
-            <main className="overflow-y-scroll">{children}</main>
+            <ScrollArea>{children}</ScrollArea>
           </div>
           {modal}
           <div id="modal-root" />

@@ -1,5 +1,5 @@
 import { clerkClient } from "@clerk/nextjs/server";
-import { deleteImage, getImage } from "~/server/queries";
+import { getImage } from "~/server/queries";
 
 export async function FullPageImageView(props: { photoId: string }) {
   const idAsNumber = Number(props.photoId);
