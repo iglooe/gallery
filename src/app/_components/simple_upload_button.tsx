@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 import { Icons } from "~/components/icons";
-import { Button } from "~/components/ui/button";
 import { useUploadThing } from "~/utils/uploadthing";
 
 // inferred input off useUploadThing

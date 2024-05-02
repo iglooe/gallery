@@ -4,9 +4,10 @@ export const dynamic = "force-dynamic";
 import Image from "next/image";
 import Link from "next/link";
 
-import { ScrollArea } from "~/components/ui/scroll-area";
 import { AspectRatio } from "~/components/ui/aspect-ratio";
 import { getAllImages } from "~/server/queries";
+import { Icons } from "~/components/icons";
+import { Alert, AlertTitle, AlertDescription } from "~/components/ui/alert";
 
 async function Images() {
   const images = await getAllImages();
@@ -35,6 +36,15 @@ export default async function HomePage() {
   return (
     <div className="h-screen w-full max-w-[950px]">
       <div className="flex-1 flex-col overscroll-auto">
+        <div className="px-4 pt-4">
+          <Alert className="space-x-1">
+            <Icons.alert />
+            <AlertTitle>This is a demo site.</AlertTitle>
+            <AlertDescription>
+              Uploading images is disabled by default.
+            </AlertDescription>
+          </Alert>
+        </div>
         <Images />
       </div>
     </div>

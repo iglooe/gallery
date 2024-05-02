@@ -5,26 +5,39 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 
+import type { Metadata } from "next";
+
 import { Toaster } from "~/components/ui/sonner";
 import { TailwindIndicator } from "~/components/tailwind-indicator";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
+import { siteConfig } from "~/config/site";
+import { ScrollArea } from "~/components/ui/scroll-area";
 
-import "@uploadthing/react/styles.css";
 import DesktopNav from "./_components/desktop-nav";
 import MobileNav from "./_components/mobile-nav";
-import { ScrollArea } from "~/components/ui/scroll-area";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-export const metadata = {
-  title: "Image Gallery",
-  description: "An image gallery made with Next.js and Drizzle ORM.",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+// export const metadata = {
+//   title: "Image Gallery",
+//   description: "An image gallery made with Next.js and Drizzle ORM.",
+//   icons: [{ rel: "icon", url: "/favicon.ico" }],
+// };
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
-
 export default function RootLayout({
   children,
   modal,
