@@ -33,7 +33,7 @@ Main technologies
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/sadmann7/skateshop.git
+   git clone https://github.com/iglooe/gallery.git
    ```
 
 2. Install dependencies using pnpm

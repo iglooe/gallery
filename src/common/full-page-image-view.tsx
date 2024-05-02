@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { AspectRatio } from "~/components/ui/aspect-ratio";
 import { Button } from "~/components/ui/button";
-import { deleteImage, getImage } from "~/server/queries";
+import { getImage } from "~/server/queries";
 import { Icons } from "~/components/icons";
 import { ExitButton } from "~/components/exit-button";
 import { DeleteButton } from "~/components/delete-button";
