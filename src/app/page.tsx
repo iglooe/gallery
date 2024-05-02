@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Shell } from "~/components/shell";
-import { ScrollArea } from "~/components/ui/scroll-area";
+import { AspectRatio } from "~/components/ui/aspect-ratio";
 import { getAllImages } from "~/server/queries";
 
 async function Images() {
@@ -14,17 +14,17 @@ async function Images() {
   return (
     <div className="flex flex-wrap justify-center gap-8">
       {images.map((image) => (
-        <div key={image.id} className="flex h-56 w-80 flex-col">
+        <div key={image.id} className="flex h-full w-full flex-col">
           <Link href={`/img/${image.id}`}>
-            <Image
-              src={image.url}
-              style={{ objectFit: "contain" }}
-              width={350}
-              height={350}
-              alt={image.name}
-            />
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                src={image.url}
+                className="rounded-none object-cover"
+                fill
+                alt={image.name}
+              />
+            </AspectRatio>
           </Link>
-          <div>{image.name}</div>
         </div>
       ))}
     </div>
@@ -33,10 +33,8 @@ async function Images() {
 
 export default async function HomePage() {
   return (
-    // <ScrollArea className="h-screen w-[600px]">
     <Shell variant="markdown">
       <Images />
     </Shell>
-    // </ScrollArea>
   );
 }

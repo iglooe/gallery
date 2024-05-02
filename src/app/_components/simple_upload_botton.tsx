@@ -64,7 +64,7 @@ export function SimpleUploadButton() {
   return (
     <div>
       <label htmlFor="upload-button" className="cursor-pointer">
-        <Button variant="ghost">
+        <Button variant="outline" className="w-full">
           <Icons.upload className="mr-2 h-4 w-4" /> Upload Images
         </Button>
       </label>

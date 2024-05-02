@@ -41,7 +41,7 @@ export default function RootLayout({
             <DesktopNav />
             <div className="flex flex-col">
               <MobileNav />
-              <ScrollArea className="h-screen w-[600px]">
+              <ScrollArea className="h-screen w-full md:w-[700px] xl:w-[800px]">
                 <main className="flex-1 flex-col overscroll-auto">
                   {children}
                 </main>
