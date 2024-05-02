@@ -7,6 +7,7 @@ import {
   Upload,
   FileSymlink,
   Menu,
+  Maximize,
 } from "lucide-react";
 
 export const Icons = {
@@ -18,6 +19,7 @@ export const Icons = {
   home: Home,
   about: FileSymlink,
   menu: Menu,
+  maximize: Maximize,
   gitHub: () => (
     <svg viewBox="0 0 438.549 438.549">
       <path

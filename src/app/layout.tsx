@@ -8,7 +8,6 @@ import { extractRouterConfig } from "uploadthing/server";
 import { Toaster } from "~/components/ui/sonner";
 import { TailwindIndicator } from "~/components/tailwind-indicator";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
-import { ScrollArea } from "~/components/ui/scroll-area";
 
 import "@uploadthing/react/styles.css";
 import DesktopNav from "./_components/desktop-nav";
@@ -41,11 +40,7 @@ export default function RootLayout({
             <DesktopNav />
             <div className="flex flex-col">
               <MobileNav />
-              <ScrollArea className="h-screen w-full md:w-[700px] xl:w-[800px]">
-                <main className="flex-1 flex-col overscroll-auto">
-                  {children}
-                </main>
-              </ScrollArea>
+              {children}
             </div>
           </div>
           {modal}

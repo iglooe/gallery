@@ -1,6 +1,10 @@
-import { clerkClient } from "@clerk/nextjs/server";
-import { Button } from "~/components/ui/button";
+import Image from "next/image";
+
+import { AspectRatio } from "~/components/ui/aspect-ratio";
+import { Button, buttonVariants } from "~/components/ui/button";
 import { deleteImage, getImage } from "~/server/queries";
+import { Icons } from "~/components/icons";
+import Link from "next/link";
 
 export async function FullPageImageView(props: { photoId: string }) {
   const idAsNumber = Number(props.photoId);
@@ -8,29 +12,30 @@ export async function FullPageImageView(props: { photoId: string }) {
 
   const image = await getImage(idAsNumber);
 
-  const userInfo = await clerkClient.users.getUser(image.userId);
-
   return (
-    <div className="flex h-full w-screen min-w-0 items-center justify-center text-white">
-      <div className="flex-shrink flex-grow">
-        <img src={image.url} className="object-contain" alt={image.name} />
-      </div>
-      <div className="flex h-full w-64 flex-shrink-0 flex-col border-l">
-        <div className="flex border-b p-2 text-center text-xl font-semibold tracking-tight">
-          {image.name}
+    <div className="flex h-full w-full min-w-0 items-center justify-center text-white">
+      <div className="relative flex-grow">
+        <AspectRatio className="w-full" ratio={16 / 9}>
+          <Image
+            fill
+            src={image.url}
+            className="object-fill"
+            alt={image.name}
+          />
+        </AspectRatio>
+        <div className="absolute bottom-0 right-0 p-1">
+          <Link
+            target="_blank"
+            rel="noreferrer"
+            href={image.url}
+            aria-description="full res image url"
+          >
+            <Button variant="ghost" className="dark rounded-none" size="icon">
+              <Icons.maximize className="h-6 w-6" />
+            </Button>
+          </Link>
         </div>
-
-        <div className="p-2">
-          <div>Uploaded By:</div>
-          <div>{userInfo.fullName}</div>
-        </div>
-
-        <div className="p-2">
-          <div>Created On:</div>
-          <div>{image.createdAt.toLocaleDateString()}</div>
-        </div>
-
-        <div className="p-2">
+        <div className="absolute bottom-0 left-0 p-2">
           <form
             action={async () => {
               "use server";

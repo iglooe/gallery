@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Shell } from "~/components/shell";
+import { ScrollArea } from "~/components/ui/scroll-area";
 import { AspectRatio } from "~/components/ui/aspect-ratio";
 import { getAllImages } from "~/server/queries";
 
@@ -12,7 +12,7 @@ async function Images() {
   const images = await getAllImages();
 
   return (
-    <div className="flex flex-wrap justify-center gap-8">
+    <div className="flex flex-wrap justify-center gap-8 px-4 py-4">
       {images.map((image) => (
         <div key={image.id} className="flex h-full w-full flex-col">
           <Link href={`/img/${image.id}`}>
@@ -33,8 +33,10 @@ async function Images() {
 
 export default async function HomePage() {
   return (
-    <Shell variant="markdown">
-      <Images />
-    </Shell>
+    <ScrollArea className="h-screen w-full max-w-[950px]">
+      <div className="flex-1 flex-col overscroll-auto">
+        <Images />
+      </div>
+    </ScrollArea>
   );
 }

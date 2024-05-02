@@ -5,6 +5,7 @@ import { Icons } from "~/components/icons";
 import { Button } from "~/components/ui/button";
 import { SimpleUploadButton } from "~/app/_components/simple_upload_botton";
 import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
+import { Separator } from "~/components/ui/separator";
 
 import TopNav from "./top-nav";
 
@@ -22,8 +23,9 @@ export default function MobileNav() {
           <nav className="grid gap-2 text-lg font-medium">
             <div className="flex items-center gap-2 text-lg font-semibold">
               <Icons.logo />
-              <span className="sr-only">Acme Inc</span>
+              <span className="text-xl font-bold tracking-tight">Acme Inc</span>
             </div>
+            <Separator className="mt-2" />
             <Link
               href="/"
               className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
