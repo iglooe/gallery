@@ -1,29 +1,65 @@
-# Create T3 App
+# Gallery
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
-## What's next? How do I make an app with this?
+## Tech stack
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+Main technologies
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- **Framework:** [Next.js](https://nextjs.org)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **User Management:** [Clerk](https://clerk.com)
+- **ORM:** [Drizzle ORM](https://orm.drizzle.team)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com)
+- **File Uploads:** [uploadthing](https://uploadthing.com)
+- **Database:** [Vercel postgres](https://vercel.com)
+- **Error Handling:** [Sentry](https://sentry.io)
+- **Ratelimiting:** [Upstash](https://upstash.com/)
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Features to be implemented
 
-## Learn More
+- [x] Authentication with **Clerk**
+- [x] File uploads with **uploadthing**
+- [x] ORM using **Drizzle ORM**
+- [x] Database on **Vercel postgres**
+- [x] Error management with **Sentry**
+- [x] Parallel routes on images click
+- [x] Delete Button (w/ Server Actions)
+- [x] Ratelimtting the api with **Upstash**
+- [ ] Analytics with **Vercel**
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Getting Started
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+1. Clone the repository
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/sadmann7/skateshop.git
+   ```
+
+2. Install dependencies using pnpm
+
+   ```bash
+   pnpm install
+   ```
+
+3. Copy the `.env.example` to `.env` and update the variables.
+
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Start the development server
+
+   ```bash
+   pnpm run dev
+   ```
+
+5. Push the database schema
+
+   ```bash
+   pnpm run db:push
+   ```
 
 ## How do I deploy this?
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Follow the deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
