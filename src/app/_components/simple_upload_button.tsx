@@ -63,17 +63,17 @@ export function SimpleUploadButton() {
 
   return (
     <div>
-      <label htmlFor="upload-button" className="cursor-pointer">
-        <Button variant="outline" className="w-full">
-          <Icons.upload className="mr-2 h-4 w-4" /> Upload Images
-        </Button>
-      </label>
-      <input
-        id="upload-button"
-        type="file"
-        className="sr-only"
-        {...inputProps}
-      />
+      <div>
+        <label htmlFor="upload-button" className="cursor-pointer">
+          <Icons.upload />
+        </label>
+        <input
+          id="upload-button"
+          type="file"
+          className="sr-only"
+          {...inputProps}
+        />
+      </div>
     </div>
   );
 }

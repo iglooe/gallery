@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { SignedIn } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 import { Icons } from "~/components/icons";
 import { Button } from "~/components/ui/button";
-import { SimpleUploadButton } from "~/app/_components/simple_upload_botton";
+import { SimpleUploadButton } from "~/app/_components/simple_upload_button";
 import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
 import { Separator } from "~/components/ui/separator";
 
@@ -41,7 +41,7 @@ export default function MobileNav() {
               About
             </Link>
             <SignedIn>
-              <SimpleUploadButton />
+              <UserButton />
             </SignedIn>
           </nav>
         </SheetContent>

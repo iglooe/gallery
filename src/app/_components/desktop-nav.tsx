@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { SignedIn } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 import { Icons } from "~/components/icons";
-import { SimpleUploadButton } from "~/app/_components/simple_upload_botton";
+import { SimpleUploadButton } from "~/app/_components/simple_upload_button";
 import { Separator } from "~/components/ui/separator";
 
 export default function DesktopNav() {
@@ -32,9 +32,6 @@ export default function DesktopNav() {
               About
             </Link>
             <Separator className="my-4" />
-            <SignedIn>
-              <SimpleUploadButton />
-            </SignedIn>
           </nav>
         </div>
       </div>
