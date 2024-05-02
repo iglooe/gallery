@@ -1,12 +1,14 @@
 import Image from "next/image";
-
-import { AspectRatio } from "~/components/ui/aspect-ratio";
-import { Button, buttonVariants } from "~/components/ui/button";
-import { deleteImage, getImage } from "~/server/queries";
-import { Icons } from "~/components/icons";
 import Link from "next/link";
 
+import { AspectRatio } from "~/components/ui/aspect-ratio";
+import { Button } from "~/components/ui/button";
+import { deleteImage, getImage } from "~/server/queries";
+import { Icons } from "~/components/icons";
+import { ExitButton } from "~/components/exit-button";
+
 export async function FullPageImageView(props: { photoId: string }) {
+  // convert the id string to a number
   const idAsNumber = Number(props.photoId);
   if (Number.isNaN(idAsNumber)) throw new Error("Invalid photo id");
 
@@ -23,6 +25,7 @@ export async function FullPageImageView(props: { photoId: string }) {
             alt={image.name}
           />
         </AspectRatio>
+        <ExitButton />
         <div className="absolute bottom-0 right-0 p-1">
           <Link
             target="_blank"
@@ -31,7 +34,7 @@ export async function FullPageImageView(props: { photoId: string }) {
             aria-description="full res image url"
           >
             <Button variant="ghost" className="dark rounded-none" size="icon">
-              <Icons.maximize className="h-6 w-6" />
+              <Icons.maximize className="h-6 w-6 text-black" />
             </Button>
           </Link>
         </div>

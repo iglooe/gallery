@@ -6,5 +6,6 @@ export const siteConfig = {
   links: {
     github: "https://github.com/iglooe",
     repo: "https://github.com/iglooe/gallery",
+    peppy: "https://github.com/peppy/wallpapers/tree/master",
   },
 };

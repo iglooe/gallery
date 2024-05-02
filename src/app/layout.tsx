@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
-
 import type { Metadata } from "next";
 
 import { Toaster } from "~/components/ui/sonner";
@@ -21,11 +20,6 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-// export const metadata = {
-//   title: "Image Gallery",
-//   description: "An image gallery made with Next.js and Drizzle ORM.",
-//   icons: [{ rel: "icon", url: "/favicon.ico" }],
-// };
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,

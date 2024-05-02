@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { SignedIn, UserButton } from "@clerk/nextjs";
 
 import { Icons } from "~/components/icons";
 import { Button } from "~/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
 import { Separator } from "~/components/ui/separator";
+import { siteConfig } from "~/config/site";
 
 import TopNav from "./top-nav";
-import { siteConfig } from "~/config/site";
 
 export default function MobileNav() {
   return (
@@ -51,6 +50,15 @@ export default function MobileNav() {
                     className="font-medium underline underline-offset-4"
                   >
                     derek
+                  </a>
+                  . Images by{" "}
+                  <a
+                    href={siteConfig.links.peppy}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium underline underline-offset-4"
+                  >
+                    peppy
                   </a>
                   . The source code is available on{" "}
                   <a

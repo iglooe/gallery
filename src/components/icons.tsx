@@ -8,6 +8,7 @@ import {
   FileSymlink,
   Menu,
   Maximize,
+  X,
 } from "lucide-react";
 
 export const Icons = {
@@ -20,6 +21,7 @@ export const Icons = {
   about: FileSymlink,
   menu: Menu,
   maximize: Maximize,
+  x: X,
   alert: () => (
     <svg
       fill="#000000"

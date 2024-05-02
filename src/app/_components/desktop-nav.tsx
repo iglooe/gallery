@@ -2,9 +2,9 @@ import { SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 
 import { Icons } from "~/components/icons";
-import { SimpleUploadButton } from "./simple_upload_button";
-import { buttonVariants } from "~/components/ui/button";
 import { siteConfig } from "~/config/site";
+
+import { SimpleUploadButton } from "./simple_upload_button";
 
 export default function DesktopNav() {
   return (
@@ -52,6 +52,15 @@ export default function DesktopNav() {
                       className="font-medium underline underline-offset-4"
                     >
                       derek
+                    </a>
+                    . Images by{" "}
+                    <a
+                      href={siteConfig.links.peppy}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-medium underline underline-offset-4"
+                    >
+                      peppy
                     </a>
                     . The source code is available on{" "}
                     <a
