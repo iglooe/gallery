@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 import { Icons } from "~/components/icons";
+import { Button } from "~/components/ui/button";
 import { useUploadThing } from "~/utils/uploadthing";
 
 // inferred input off useUploadThing
@@ -63,7 +64,9 @@ export function SimpleUploadButton() {
   return (
     <div>
       <label htmlFor="upload-button" className="cursor-pointer">
-        <Icons.upload />
+        <Button variant="ghost">
+          <Icons.upload className="mr-2 h-4 w-4" /> Upload Images
+        </Button>
       </label>
       <input
         id="upload-button"

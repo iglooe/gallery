@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Shell } from "~/components/shell";
+import { ScrollArea } from "~/components/ui/scroll-area";
 import { getAllImages } from "~/server/queries";
 
 async function Images() {
@@ -32,8 +33,10 @@ async function Images() {
 
 export default async function HomePage() {
   return (
+    // <ScrollArea className="h-screen w-[600px]">
     <Shell variant="markdown">
       <Images />
     </Shell>
+    // </ScrollArea>
   );
 }

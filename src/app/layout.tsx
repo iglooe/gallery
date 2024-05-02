@@ -6,12 +6,13 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 
 import { Toaster } from "~/components/ui/sonner";
-import { TopNav } from "~/app/_components/top-nav";
-import { ScrollArea } from "~/components/ui/scroll-area";
 import { TailwindIndicator } from "~/components/tailwind-indicator";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
+import { ScrollArea } from "~/components/ui/scroll-area";
 
 import "@uploadthing/react/styles.css";
+import DesktopNav from "./_components/desktop-nav";
+import MobileNav from "./_components/mobile-nav";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,10 +36,17 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-        <body className={`font-sans ${inter.variable}`}>
-          <div className="grid h-screen grid-rows-[auto,1fr]">
-            <TopNav />
-            <ScrollArea>{children}</ScrollArea>
+        <body className={`font-sans ${inter.variable} overflow-hidden`}>
+          <div className="grid md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
+            <DesktopNav />
+            <div className="flex flex-col">
+              <MobileNav />
+              <ScrollArea className="h-screen w-[600px]">
+                <main className="flex-1 flex-col overscroll-auto">
+                  {children}
+                </main>
+              </ScrollArea>
+            </div>
           </div>
           {modal}
           <div id="modal-root" />
