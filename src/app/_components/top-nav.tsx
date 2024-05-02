@@ -5,9 +5,11 @@ export default function TopNav() {
   return (
     <>
       <div className="flex gap-6">
-        <SimpleUploadButton />
+        <SignedIn>
+          <SimpleUploadButton />
+        </SignedIn>
       </div>
-      <div className="flex flex-1 sm:justify-end">
+      <div className="flex max-w-[900px] flex-1 justify-end pr-1">
         <SignedOut>
           <SignInButton />
         </SignedOut>

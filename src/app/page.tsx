@@ -33,10 +33,10 @@ async function Images() {
 
 export default async function HomePage() {
   return (
-    <ScrollArea className="h-screen w-full max-w-[950px]">
+    <div className="h-screen w-full max-w-[950px]">
       <div className="flex-1 flex-col overscroll-auto">
         <Images />
       </div>
-    </ScrollArea>
+    </div>
   );
 }

@@ -1,8 +1,6 @@
 import Link from "next/link";
-import { SignedIn, UserButton } from "@clerk/nextjs";
 
 import { Icons } from "~/components/icons";
-import { SimpleUploadButton } from "~/app/_components/simple_upload_button";
 import { Separator } from "~/components/ui/separator";
 
 export default function DesktopNav() {

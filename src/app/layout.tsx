@@ -12,6 +12,7 @@ import { ourFileRouter } from "~/app/api/uploadthing/core";
 import "@uploadthing/react/styles.css";
 import DesktopNav from "./_components/desktop-nav";
 import MobileNav from "./_components/mobile-nav";
+import { ScrollArea } from "~/components/ui/scroll-area";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,7 +41,7 @@ export default function RootLayout({
             <DesktopNav />
             <div className="flex flex-col">
               <MobileNav />
-              {children}
+              <ScrollArea className="w-full">{children}</ScrollArea>
             </div>
           </div>
           {modal}
