@@ -53,7 +53,7 @@ function AlertNotice() {
 
 export default function HomePage() {
   return (
-    <div className="h-screen w-full max-w-[950px]">
+    <div className="h-[calc(100vh-56px)] w-full max-w-[950px]">
       <div className="flex-1 flex-col overscroll-auto">
         <AlertNotice />
         <Suspense fallback={<ImageSkeleton />}>

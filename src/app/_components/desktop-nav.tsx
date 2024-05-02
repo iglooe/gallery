@@ -1,10 +1,7 @@
-import { SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 
 import { Icons } from "~/components/icons";
 import { siteConfig } from "~/config/site";
-
-import { SimpleUploadButton } from "./simple_upload_button";
 
 export default function DesktopNav() {
   return (
