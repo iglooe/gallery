@@ -21,11 +21,6 @@ export default function DesktopNav() {
                   <Icons.camera />
                   <span className="text-xl font-semibold">Acme Gallery</span>
                 </Link>
-                <div className="flex flex-1 justify-end pr-4 pt-1">
-                  <SignedIn>
-                    <SimpleUploadButton />
-                  </SignedIn>
-                </div>
               </div>
               <Link
                 href="/"
@@ -41,8 +36,8 @@ export default function DesktopNav() {
                 <Icons.about className="h-4 w-4" />
                 About
               </Link>
-              <div className="items-center px-6 py-6">
-                <div className="flex flex-col gap-4 md:h-16 md:flex-row md:py-0">
+              <div className="items-center px-3 py-6">
+                <div className="flex flex-col">
                   <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
                     Built by{" "}
                     <a

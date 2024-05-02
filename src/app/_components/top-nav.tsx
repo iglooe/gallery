@@ -1,4 +1,5 @@
 import { SignedOut, SignInButton, SignedIn, UserButton } from "@clerk/nextjs";
+import { SimpleUploadButton } from "./simple_upload_button";
 
 export default function TopNav() {
   return (
@@ -7,9 +8,12 @@ export default function TopNav() {
         <SignedOut>
           <SignInButton />
         </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
+        <div className="flex flex-row space-x-3">
+          <SignedIn>
+            <SimpleUploadButton />
+            <UserButton />
+          </SignedIn>
+        </div>
       </div>
     </>
   );

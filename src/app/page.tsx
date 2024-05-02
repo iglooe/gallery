@@ -10,12 +10,13 @@ import { getAllImages } from "~/server/queries";
 import { Icons } from "~/components/icons";
 import { Alert, AlertTitle, AlertDescription } from "~/components/ui/alert";
 import { ImageSkeleton } from "./_components/image-skeleton";
+import { SignedIn } from "@clerk/nextjs";
 
 async function AllImages() {
   const images = await getAllImages();
 
   return (
-    <div className="flex flex-wrap justify-center gap-8 px-4 py-4">
+    <div className="flex flex-wrap justify-center gap-4 px-4 pb-2">
       {images.map((image) => (
         <div key={image.id} className="flex h-full w-full flex-col">
           <Link href={`/img/${image.id}`}>
@@ -36,15 +37,17 @@ async function AllImages() {
 
 function AlertNotice() {
   return (
-    <div className="px-4">
-      <Alert className="space-x-1">
-        <Icons.alert />
-        <AlertTitle>This is a demo site.</AlertTitle>
-        <AlertDescription>
-          Uploading images is disabled by default.
-        </AlertDescription>
-      </Alert>
-    </div>
+    <SignedIn>
+      <div className="px-4">
+        <Alert className="space-x-1">
+          <Icons.alert />
+          <AlertTitle>This is a demo site.</AlertTitle>
+          <AlertDescription>
+            Uploading images is disabled by default.
+          </AlertDescription>
+        </Alert>
+      </div>
+    </SignedIn>
   );
 }
 

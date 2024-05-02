@@ -64,7 +64,7 @@ export function SimpleUploadButton() {
     <div>
       <div>
         <label htmlFor="upload-button" className="cursor-pointer">
-          <Icons.upload />
+          <Icons.upload className="h-8" />
         </label>
         <input
           id="upload-button"

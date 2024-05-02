@@ -39,7 +39,7 @@ export default function MobileNav() {
               <Icons.about className="h-4 w-4" />
               About
             </Link>
-            <div className="items-center px-6 py-6">
+            <div className="items-center px-3 py-6">
               <div className="flex flex-col gap-4 md:h-16 md:flex-row md:py-0">
                 <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
                   Built by{" "}
