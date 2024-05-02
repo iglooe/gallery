@@ -36,7 +36,7 @@ async function AllImages() {
 
 function AlertNotice() {
   return (
-    <div className="px-4 pt-4">
+    <div className="px-4">
       <Alert className="space-x-1">
         <Icons.alert />
         <AlertTitle>This is a demo site.</AlertTitle>
