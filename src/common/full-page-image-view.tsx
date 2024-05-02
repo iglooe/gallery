@@ -6,6 +6,7 @@ import { Button } from "~/components/ui/button";
 import { deleteImage, getImage } from "~/server/queries";
 import { Icons } from "~/components/icons";
 import { ExitButton } from "~/components/exit-button";
+import { DeleteButton } from "~/components/delete-button";
 
 export async function FullPageImageView(props: { photoId: string }) {
   // convert the id string to a number
@@ -38,19 +39,7 @@ export async function FullPageImageView(props: { photoId: string }) {
             </Button>
           </Link>
         </div>
-        <div className="absolute bottom-0 left-0 p-2">
-          <form
-            action={async () => {
-              "use server";
-
-              await deleteImage(idAsNumber);
-            }}
-          >
-            <Button type="submit" variant="destructive">
-              Delete
-            </Button>
-          </form>
-        </div>
+        <DeleteButton photoId={image.id} />
       </div>
     </div>
   );
