@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "ACME Gallery",
+  name: "ACME Corp.",
   description: "A photography gallery made with Next.js and Drizzle ORM.",
   links: {
     github: "https://github.com/iglooe",

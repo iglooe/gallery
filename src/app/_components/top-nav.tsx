@@ -1,22 +1,12 @@
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import { Icons } from "~/components/icons";
-import { Alert, AlertTitle, AlertDescription } from "~/components/ui/alert";
+
 import { SimpleUploadButton } from "./simple_upload_button";
 
 export function TopNav() {
   return (
-    <div className="flex w-full items-center justify-center">
-      <div className="h-18 flex space-x-4 py-2">
-        <div className="flex flex-1 items-center justify-start space-x-4">
-          <Alert className="flex items-center space-x-1">
-            <Icons.alert />
-            <AlertTitle>This is a demo site.</AlertTitle>
-            <AlertDescription>
-              Uploading images is disabled by default.
-            </AlertDescription>
-          </Alert>
-        </div>
-        <div className="flex items-center space-x-2">
+    <div className="flex h-20 items-center justify-center px-2">
+      <div className="flex w-full max-w-4xl items-center justify-center">
+        <div className="flex h-14 w-14 flex-1 items-center justify-end gap-4 p-2">
           <SignedOut>
             <SignInButton />
           </SignedOut>
