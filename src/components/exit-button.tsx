@@ -15,7 +15,7 @@ export function ExitButton() {
         size="icon"
         className="dark rounded-none"
       >
-        <Icons.x className="h-6 w-6 text-black" />
+        <Icons.x className="h-6 w-6" />
       </Button>
     </div>
   );

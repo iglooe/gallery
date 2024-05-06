@@ -35,7 +35,7 @@ export async function FullPageImageView(props: { photoId: string }) {
             aria-description="full res image url"
           >
             <Button variant="ghost" className="dark rounded-none" size="icon">
-              <Icons.maximize className="h-6 w-6 text-black" />
+              <Icons.maximize className="h-6 w-6" />
             </Button>
           </Link>
         </div>
