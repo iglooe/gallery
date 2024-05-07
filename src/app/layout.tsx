@@ -1,23 +1,24 @@
-import "~/styles/globals.css";
+import "~/styles/globals.css"
 
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
-import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
-import { extractRouterConfig } from "uploadthing/server";
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import { ClerkProvider } from "@clerk/nextjs"
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin"
+import { extractRouterConfig } from "uploadthing/server"
 
-import { ourFileRouter } from "~/app/api/uploadthing/core";
-import { siteConfig } from "~/config/site";
-import { ScrollArea } from "~/components/ui/scroll-area";
-import { Toaster } from "~/components/ui/sonner";
-import { TailwindIndicator } from "~/components/tailwind-indicator";
+import { ourFileRouter } from "~/app/api/uploadthing/core"
+import { siteConfig } from "~/config/site"
+import { ScrollArea } from "~/components/ui/scroll-area"
+import { Toaster } from "~/components/ui/sonner"
+import { TailwindIndicator } from "~/components/tailwind-indicator"
+import { ourFileRouter } from "~/app/api/uploadthing/core"
 
-import { TopNav } from "./_components/top-nav";
+import { TopNav } from "./_components/top-nav"
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-});
+})
 
 export const metadata: Metadata = {
   title: {
@@ -30,13 +31,13 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-};
+}
 export default function RootLayout({
   children,
   modal,
 }: {
-  children: React.ReactNode;
-  modal: React.ReactNode;
+  children: React.ReactNode
+  modal: React.ReactNode
 }) {
   return (
     <ClerkProvider>
@@ -56,5 +57,5 @@ export default function RootLayout({
         </body>
       </html>
     </ClerkProvider>
-  );
+  )
 }
