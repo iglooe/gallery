@@ -6,12 +6,13 @@ import { ClerkProvider } from "@clerk/nextjs"
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin"
 import { extractRouterConfig } from "uploadthing/server"
 
-import { ourFileRouter } from "~/app/api/uploadthing/core"
+// prettier-ignore
+import { ourFileRouter } from "~/app/api/uploadthing/core";
+
 import { siteConfig } from "~/config/site"
 import { ScrollArea } from "~/components/ui/scroll-area"
 import { Toaster } from "~/components/ui/sonner"
 import { TailwindIndicator } from "~/components/tailwind-indicator"
-import { ourFileRouter } from "~/app/api/uploadthing/core"
 
 import { TopNav } from "./_components/top-nav"
 
