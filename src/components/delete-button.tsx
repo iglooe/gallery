@@ -18,7 +18,7 @@ export function DeleteButton(props: { photoId: number }) {
   if (Number.isNaN(idAsNumber)) throw new Error("Invalid photo id");
 
   return (
-    <div className="absolute bottom-0 left-0 p-2">
+    <div className="absolute bottom-0 right-0 p-2">
       <form
         action={async () => {
           "use server";

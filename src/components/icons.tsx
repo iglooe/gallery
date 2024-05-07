@@ -2,8 +2,7 @@ import {
   Aperture,
   ArrowRightIcon as ArrowRight,
   Home,
-  Moon,
-  SunMedium,
+  ExternalLink,
   Upload,
   FileSymlink,
   Menu,
@@ -12,12 +11,11 @@ import {
 } from "lucide-react";
 
 export const Icons = {
-  sun: SunMedium,
-  moon: Moon,
   arrowR: ArrowRight,
   upload: Upload,
   logo: Aperture,
   home: Home,
+  link: ExternalLink,
   about: FileSymlink,
   menu: Menu,
   maximize: Maximize,

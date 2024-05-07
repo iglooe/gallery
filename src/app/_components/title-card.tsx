@@ -23,7 +23,7 @@ export function TitleCard() {
         <h1 className="mb-4 mt-6 font-bold uppercase tracking-widest text-black">
           An Example Gallery
         </h1>
-        <p className="max-w-[40ch] text-left text-black/75 sm:max-w-[32ch]">
+        <p className="max-w-[40ch] text-black/75 sm:max-w-[32ch]">
           Built by{" "}
           <a
             href={siteConfig.links.github}
