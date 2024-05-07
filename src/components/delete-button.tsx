@@ -8,22 +8,22 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "~/components/ui/alert-dialog";
-import { Button } from "~/components/ui/button";
-import { deleteImage } from "~/server/queries";
+} from "~/components/ui/alert-dialog"
+import { Button } from "~/components/ui/button"
+import { deleteImage } from "~/server/queries"
 
 export function DeleteButton(props: { photoId: number }) {
   // convert the id string to a number
-  const idAsNumber = Number(props.photoId);
-  if (Number.isNaN(idAsNumber)) throw new Error("Invalid photo id");
+  const idAsNumber = Number(props.photoId)
+  if (Number.isNaN(idAsNumber)) throw new Error("Invalid photo id")
 
   return (
     <div className="absolute bottom-0 right-0 p-2">
       <form
         action={async () => {
-          "use server";
+          "use server"
 
-          await deleteImage(idAsNumber);
+          await deleteImage(idAsNumber)
         }}
       >
         <AlertDialog>
@@ -48,5 +48,5 @@ export function DeleteButton(props: { photoId: number }) {
         </AlertDialog>
       </form>
     </div>
-  );
+  )
 }

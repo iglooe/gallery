@@ -1,4 +1,4 @@
-export type SiteConfig = typeof siteConfig;
+export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
   name: "ACME Corp.",
@@ -8,4 +8,4 @@ export const siteConfig = {
     repo: "https://github.com/iglooe/gallery",
     peppy: "https://github.com/peppy/wallpapers/tree/master",
   },
-};
+}

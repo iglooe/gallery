@@ -1,5 +1,5 @@
-import { Icons } from "~/components/icons";
-import { siteConfig } from "~/config/site";
+import { siteConfig } from "~/config/site"
+import { Icons } from "~/components/icons"
 
 //prettier-ignore
 export function TitleCard() {

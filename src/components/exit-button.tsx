@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"
 
-import { Button } from "./ui/button";
-import { Icons } from "./icons";
+import { Icons } from "./icons"
+import { Button } from "./ui/button"
 
 export function ExitButton() {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <div className="absolute left-0 top-0 p-2">
       <Button
@@ -17,5 +17,5 @@ export function ExitButton() {
         <Icons.x className="h-6 w-6" />
       </Button>
     </div>
-  );
+  )
 }

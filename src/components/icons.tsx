@@ -1,14 +1,14 @@
 import {
   Aperture,
   ArrowRightIcon as ArrowRight,
-  Home,
   ExternalLink,
-  Upload,
   FileSymlink,
-  Menu,
+  Home,
   Maximize,
+  Menu,
+  Upload,
   X,
-} from "lucide-react";
+} from "lucide-react"
 
 export const Icons = {
   arrowR: ArrowRight,
@@ -241,4 +241,4 @@ export const Icons = {
       />
     </svg>
   ),
-};
+}

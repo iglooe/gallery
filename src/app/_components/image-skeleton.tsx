@@ -1,5 +1,5 @@
-import { AspectRatio } from "~/components/ui/aspect-ratio";
-import { Skeleton } from "~/components/ui/skeleton";
+import { AspectRatio } from "~/components/ui/aspect-ratio"
+import { Skeleton } from "~/components/ui/skeleton"
 
 export function ImageSkeleton() {
   return (
@@ -8,5 +8,5 @@ export function ImageSkeleton() {
         <Skeleton className="h-[520px] w-[920px] rounded-none object-cover" />
       </AspectRatio>
     </div>
-  );
+  )
 }

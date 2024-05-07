@@ -1,6 +1,6 @@
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs"
 
-import { SimpleUploadButton } from "./simple_upload_button";
+import { SimpleUploadButton } from "./simple_upload_button"
 
 export function TopNav() {
   return (
@@ -17,5 +17,5 @@ export function TopNav() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,14 +1,15 @@
+import Image from "next/image"
+import Link from "next/link"
+
+import { getAllImages } from "~/server/queries"
+
+import { TitleCard } from "./_components/title-card"
+
 // disable caching of older images, and force new images to the ui ASAP.
-export const dynamic = "force-dynamic";
-
-import Image from "next/image";
-import Link from "next/link";
-
-import { getAllImages } from "~/server/queries";
-import { TitleCard } from "./_components/title-card";
+export const dynamic = "force-dynamic"
 
 export default async function HomePage() {
-  const images = await getAllImages();
+  const images = await getAllImages()
 
   return (
     <div className="grid max-w-4xl grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2 lg:py-6">
@@ -34,5 +35,5 @@ export default async function HomePage() {
         </Link>
       ))}
     </div>
-  );
+  )
 }
