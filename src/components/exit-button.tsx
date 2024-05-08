@@ -14,7 +14,7 @@ export function ExitButton() {
         size="icon"
         className="rounded-full"
       >
-        <Icons.x className="h-6 w-6" />
+        <Icons.x className="size-6" />
       </Button>
     </div>
   )

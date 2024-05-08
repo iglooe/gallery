@@ -13,14 +13,14 @@ export async function FullPageImageView(props: { photoId: string }) {
   const image = await getImage(idAsNumber)
 
   return (
-    <div className="relative z-50 flex aspect-[3/2] w-full max-w-7xl items-center p-4 xl:p-0 wide:h-full xl:taller-than-854:h-auto">
+    <div className="relative z-50 flex aspect-[8/5] w-full max-w-7xl items-center p-4 xl:p-0 wide:h-full xl:taller-than-854:h-auto">
       {/* Main image */}
       <div className="w-full overflow-hidden">
-        <div className="relative flex aspect-[16/9] items-center justify-center">
+        <div className="relative flex items-center justify-center">
           <Image
             src={image.url}
             width={1920}
-            height={1280}
+            height={1200}
             priority
             alt="Next.js Conf image"
           />
