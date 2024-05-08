@@ -19,8 +19,8 @@ export async function FullscreenButton(props: { photoId: number }) {
         href={image.url}
         aria-description="full res image url"
       >
-        <Button className="rounded-full" size="icon">
-          <Icons.link className="h-6 w-6" />
+        <Button className="dark rounded-full" variant="outline" size="icon">
+          <Icons.link className="size-4 text-white md:size-6" />
         </Button>
       </Link>
     </div>

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { Icons } from "./icons"
 import { Button } from "./ui/button"
 
-export function ExitButton() {
+export function BackButton() {
   const router = useRouter()
   return (
     <div className="absolute left-0 top-0 p-2">
@@ -15,7 +15,7 @@ export function ExitButton() {
         variant="outline"
         className="dark rounded-full"
       >
-        <Icons.x className="size-4 text-white md:size-6" />
+        <Icons.back className="size-4 text-white md:size-6" />
       </Button>
     </div>
   )

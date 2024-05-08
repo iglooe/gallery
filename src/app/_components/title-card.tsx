@@ -54,11 +54,11 @@ export function TitleCard() {
         </p>
         <div
           id="alert-border"
-          className="flex items-center border-l-4 bg-background p-4"
+          className="flex items-center bg-transparent p-4"
           role="alert"
         >
           <Icons.alert />
-          <div className="ms-3 text-sm font-medium text-gray-800 dark:text-gray-300">
+          <div className="ms-3 text-sm font-medium text-black/90">
             This is a demo app!{" "}
             <span className="text-sm font-normal">
               Image uploads are disabled

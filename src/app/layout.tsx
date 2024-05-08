@@ -47,7 +47,7 @@ export default function RootLayout({
         <body className={`font-sans ${inter.variable} overflow-hidden`}>
           <ScrollArea className="h-screen w-full">
             <TopNav />
-            <main className="flex justify-center p-4">
+            <main className="flex justify-center">
               {children}
               {modal}
               <div id="modal-root" />

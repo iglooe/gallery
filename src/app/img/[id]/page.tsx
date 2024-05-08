@@ -1,4 +1,4 @@
-import { FullPageImageView } from "~/common/full-page-image-view"
+import { FullscreenView } from "~/views/fullscreen-view"
 
 export default function PhotoModal({
   params: { id: photoId },
@@ -6,8 +6,8 @@ export default function PhotoModal({
   params: { id: string }
 }) {
   return (
-    <div className="flex size-full min-h-0 min-w-0 overflow-y-hidden">
-      <FullPageImageView photoId={photoId} />
+    <div className="flex min-h-0 min-w-0 overflow-y-hidden">
+      <FullscreenView photoId={photoId} />
     </div>
   )
 }

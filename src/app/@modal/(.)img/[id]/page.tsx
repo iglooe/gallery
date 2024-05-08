@@ -1,4 +1,4 @@
-import { FullPageImageView } from "~/common/full-page-image-view"
+import { ModalPopup } from "~/views/modal-view"
 
 import { Modal } from "./modal"
 
@@ -9,7 +9,7 @@ export default async function PhotoModal({
 }) {
   return (
     <Modal>
-      <FullPageImageView photoId={photoId} />
+      <ModalPopup photoId={photoId} />
     </Modal>
   )
 }

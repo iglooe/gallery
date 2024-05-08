@@ -5,7 +5,7 @@ import { ExitButton } from "~/components/exit-button"
 import { FullscreenButton } from "~/components/fullscreen-button"
 import { getImage } from "~/server/queries"
 
-export async function FullPageImageView(props: { photoId: string }) {
+export async function ModalPopup(props: { photoId: string }) {
   // convert the id string to a number
   const idAsNumber = Number(props.photoId)
   if (Number.isNaN(idAsNumber)) throw new Error("Invalid photo id")
